@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+      window.onload = function() {
+        // 변수를 선언합니다.
+        var count = 0;
+        var image = document.getElementById('image');
+        var frames = [
+          '../static/run/0.png',
+          '../static/run/1.png',
+          '../static/run/2.png',
+          '../static/run/3.png',
+          '../static/run/4.png',
+          '../static/run/5.png',
+          '../static/run/6.png',
+          '../static/run/7.png',
+          '../static/run/8.png',
+          '../static/run/9.png',
+          '../static/run/10.png',
+          '../static/run/11.png',
+          '../static/run/12.png',
+          '../static/run/13.png',
+          '../static/run/14.png',
+        ];
+        // 타이머 반복을 시작합니다.
+        setInterval(function() {
+          image.src = frames[count % frames.length];
+          count = count + 1;
+        }, 1000 / 20);
+      };
+    </script>
+</head>
+<body>
+<img id="image"/>
+</body>
+</html>
